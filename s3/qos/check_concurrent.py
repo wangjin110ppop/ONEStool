@@ -101,9 +101,9 @@ def read_log(concurrent, start_time, end_time):
     with open(log_path, "rb") as f:
         line = f.readline()
         while line:
-            ret =  get_calc_qos_detail(line, start_time, end_time, concurrent)
+            ret = get_calc_qos_detail(line, start_time, end_time, concurrent)
             if ret:
-            	write_csv(ret)
+                write_csv(ret)
             line = f.readline()
 
 
